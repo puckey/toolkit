@@ -523,8 +523,8 @@ class Str {
       $string = preg_replace('![' . preg_quote($separator) . ']{2,}!', $separator, $string);
     }
 
-    // trim trailing and leading dashes
-    $string = trim($string, $separator);
+    // trim trailing dashes
+    $string = rtrim($string, $separator);
 
     // replace slashes with dashes
     $string = str_replace('/', $separator, $string);
